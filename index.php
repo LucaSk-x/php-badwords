@@ -14,8 +14,14 @@ $testo = 'The European languages are members of the same family. Their separate 
 language would be desirable: one could refuse to pay expensive translators.';
 
 $word = $_GET['word'];
+$find = str_ireplace($word,"***", $testo);
 
-echo 'lunghezza del testo '. strlen($testo);
 ?>
 
 <h2><?php echo $testo ?></h2>
+<h2><?php echo 'lunghezza del testo '. strlen($testo)?></h2>
+
+<h1>_______________</h1>
+
+<h2><?php echo $find ?></h2>
+<h2><?php echo "<strong> La lunghezza del nuovo paragrafo è:</strong>" . strlen($find) ?></h2>
